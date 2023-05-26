@@ -12,6 +12,7 @@ INSERT INTO icc_world_cup values('Eng', 'NZ', 'NZ');
 INSERT INTO icc_world_cup values('Aus', 'India', 'India');
 
 select * from icc_world_cup;
+
 select team_name, count(1) as no_of_matches_played,sum(win_flag) as no_of_matches_won,count(1) - sum(win_flag) as no_of_losses 
 from (
 	select Team_1 as team_name, case when Team_1=winner then 1 else 0 end as win_flag
